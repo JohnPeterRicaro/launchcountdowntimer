@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-shadow{
+    -webkit-box-shadow: 0px 17px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 17px 12px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 17px 12px 1px rgba(0,0,0,0.75);
+}
+
+.bottom-flip-shadow{
+    -webkit-box-shadow: inset 0px -2px 1px 0px rgba(0,0,0,0.42);
+    -moz-box-shadow: inset 0px -2px 1px 0px rgba(0,0,0,0.42);
+    box-shadow: inset 0px -2px 1px 0px rgba(0,0,0,0.42);
+}
+
+.top-flip-shadow{
+    -webkit-box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.42);
+    -moz-box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.42);
+    box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.42);
+}
+
+.flip-card-top {
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+}
+
+@keyframes flip-top {
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+.flip-card-bottom {
+    animation: flip-bottom 250ms ease-in-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+    100% {
+        transform: rotateX(0deg);
+    }
+}
